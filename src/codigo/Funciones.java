@@ -1,7 +1,6 @@
 package codigo;
 
 import java.util.ArrayList;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Funciones {
 	
@@ -24,8 +23,13 @@ public class Funciones {
 		}
 		
 		// Función 3
-		public static int numeroDivisible2(int numero) {
-			int numeroDelIntervalo = ThreadLocalRandom.current().nextInt(100, 200 + 1);
+		/*
+		 * He cambiado esta funcion para poder introducir el numeroDelIntervalo
+		 * 100-200, ya que he pensado que para las pruebas de caja blanca, es necesario
+		 * que pueda introducir dicho numero.
+		 */
+		public static int numeroDivisible2(int numero, int numeroDelIntervalo) {
+			//int numeroDelIntervalo = ThreadLocalRandom.current().nextInt(100, 200 + 1);
 			if(numero%3==0 && numero%numeroDelIntervalo==0) {
 				return numero/numeroDelIntervalo;
 			}else {
